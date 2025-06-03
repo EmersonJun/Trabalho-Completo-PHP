@@ -40,5 +40,14 @@ class Carrinho {
     public function removerItem($item_id) {
         $this->db->prepare("DELETE FROM carrinho_itens WHERE id = ?")->execute([$item_id]);
     }
+   public function limparCarrinho($usuarioId)
+{
+    $carrinho_id = $this->getCarrinhoId($usuarioId);
+    $stmtS = $this->db->prepare("DELETE FROM carrinho_itens WHERE carrinho_id = ?");
+    $stmtS->execute([$carrinho_id]);
+}
+
+
+
 }
 ?>

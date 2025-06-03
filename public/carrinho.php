@@ -29,5 +29,14 @@ foreach ($itens as $item):
 </tr>
 <?php endforeach; ?>
 </table>
+
 <p><strong>Total: R$ <?= number_format($total, 2, ',', '.') ?></strong></p>
+<?php if (!empty($itens)) : ?>
+<div>
+    <button onclick="window.location.href='comprar.php'">Comprar</button>
+</div>
+<?php endif; ?>
+
+
+
 <?php include '../views/templates/footer.php'; ?>
