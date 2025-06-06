@@ -7,8 +7,8 @@
 
 <form method="POST" action="login.php">
     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($token) ?>">
-    <label>CPF: <input type="text" name="cpf" required></label><br>
-    <label>Data de Nascimento: <input type="date" name="data_nascimento" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Senha: <input type="password" name="senha" required></label><br>
     <button type="submit">Entrar</button>
 </form>
 

@@ -22,13 +22,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<?php include '../views/templates/header.php'; ?>
-<h2>Login</h2>
-<?php if ($erro): ?><p style="color:red;"><?= $erro ?></p><?php endif; ?>
-<form method="POST">
-    <label>Email: <input type="email" name="email" required></label><br>
-    <label>Senha: <input type="password" name="senha" required></label><br>
-    <button type="submit">Entrar</button>
-</form>
-<p>Não tem conta? <a href="cadastro.php">Cadastre-se aqui</a></p>
-<?php include '../views/templates/footer.php'; ?>
+
+<?php include '../views/login.php'; ?>

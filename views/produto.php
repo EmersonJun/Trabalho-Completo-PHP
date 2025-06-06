@@ -1,4 +1,5 @@
 <?php include 'templates/header.php'; ?>
+
 <h1><?= htmlspecialchars($produto['nome']) ?></h1>
 <p><?= nl2br(htmlspecialchars($produto['descricao'])) ?></p>
 <p>Preço: R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
