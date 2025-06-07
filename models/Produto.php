@@ -22,9 +22,9 @@ class Produto {
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function criar($nome, $descricao, $preco, $imagem, $criado_por, $categoria_id) {
-        $stmt = $this->db->prepare("INSERT INTO produtos (nome, descricao, preco, imagem, criado_por, categoria_id) VALUES (?, ?, ?, ?, ?, ?)");
-        return $stmt->execute([$nome, $descricao, $preco, $imagem, $criado_por, $categoria_id]);
+    public function criar($nome, $descricao, $preco, $criado_por, $categoria_id) {
+        $stmt = $this->db->prepare("INSERT INTO produtos (nome, descricao, preco, criado_por, categoria_id) VALUES (?, ?, ?, ?, ?, ?)");
+        return $stmt->execute([$nome, $descricao, $preco, $criado_por, $categoria_id]);
     }
 }
 ?>

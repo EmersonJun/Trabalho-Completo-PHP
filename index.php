@@ -6,6 +6,5 @@ require_once 'controllers/ProdutoController.php';
 $produtoController = new ProdutoController();
 $produtos = $produtoController->listarProdutos();
 
-// Inclui a view e envia os produtos
 include 'views/index.php'; 
 ?>

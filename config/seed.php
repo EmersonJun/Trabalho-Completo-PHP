@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php'; // Isso já chama getConnection() que invoca preCarga()
+require_once 'db.php';
 DB::getConnection();
 echo "Pré-carga executada com sucesso.";
 ?>
