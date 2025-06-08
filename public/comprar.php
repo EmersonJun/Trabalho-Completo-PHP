@@ -7,7 +7,6 @@ if (!isset($_SESSION['usuario'])) {
     die("Acesso negado.");
 }
 
-// Limpa o carrinho
 $carrinho = new Carrinho();
 $carrinho->limparCarrinho($_SESSION['usuario']['id']);
 

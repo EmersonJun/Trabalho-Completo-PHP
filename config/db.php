@@ -1,4 +1,6 @@
 <?php
+define('BASE_URL', '/TrabalhoF2-PHP/TrabalhoF-PHP-main/');
+
 class DB {
     private static $instance;
 

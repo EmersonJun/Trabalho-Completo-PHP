@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -20,7 +21,13 @@
                             </div>
                             <div class="card-footer">
                                 <p class="text-primary fw-bold mb-2">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
-                                <a href="produto.php?id=<?= $produto['id'] ?>" class="btn btn-outline-primary w-100">Ver Detalhes</a>
+
+                                <?php if (isset($_SESSION['usuario'])): ?>
+                                    <a href="produto.php?id=<?= $produto['id'] ?>" class="btn btn-outline-primary w-100">Ver Detalhes</a>
+                                <?php else: ?>
+                                    <a href="/TrabalhoF2-PHP/TrabalhoF-PHP-main/public/login.php" class="btn btn-outline-secondary w-100">Faça login para ver detalhes</a>
+                                <?php endif; ?>
+                                
                             </div>
                         </div>
                     </div>
