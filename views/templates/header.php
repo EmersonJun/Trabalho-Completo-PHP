@@ -27,8 +27,6 @@
         <?php endif; ?>
         <a href="/TrabalhoF2-PHP/TrabalhoF-PHP-main/public/logout.php">Sair</a>
     <?php else: ?>
-        <a href="/TrabalhoF2-PHP/TrabalhoF-PHP-main/public/index.php">Comprar</a>
-        <a href="/TrabalhoF2-PHP/TrabalhoF-PHP-main/public/sobre.php">Sobre</a>
         <a href="/TrabalhoF2-PHP/TrabalhoF-PHP-main/public/login.php">Login</a>
         <a href="/TrabalhoF2-PHP/TrabalhoF-PHP-main/public/cadastro.php">Cadastro</a>
     <?php endif; ?>
