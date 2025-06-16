@@ -11,10 +11,11 @@ class Carrinho {
         $stmt->execute([$usuario_id]);
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($result) return $result['id'];
-
+        
         $this->db->prepare("INSERT INTO carrinhos (usuario_id) VALUES (?)")->execute([$usuario_id]);
         return $this->db->lastInsertId();
     }
+
 
     public function adicionarItem($usuario_id, $produto_id, $quantidade = 1) {
         $carrinho_id = $this->getCarrinhoId($usuario_id);

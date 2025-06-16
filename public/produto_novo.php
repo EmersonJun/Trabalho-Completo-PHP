@@ -25,20 +25,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<?php include '../views/templates/header.php'; ?>
-<h2>Novo Produto</h2>
-<?php if ($erro): ?><p style="color:red;"><?= $erro ?></p><?php endif; ?>
-<form method="POST">
-    <label>Nome: <input type="text" name="nome" required></label><br>
-    <label>Descrição: <textarea name="descricao"></textarea></label><br>
-    <label>Preço: <input type="number" step="0.01" name="preco" required></label><br>
-    <label>Categoria: 
-        <select name="categoria_id">
-            <?php foreach ($categorias as $cat): ?>
-                <option value="<?= $cat['id'] ?>"><?= htmlspecialchars($cat['nome']) ?></option>
-            <?php endforeach; ?>
-        </select>
-    </label><br>
-    <button type="submit">Salvar</button>
-</form>
-<?php include '../views/templates/footer.php'; ?>
+<?php include '../views/produtoNovo.php'; ?>
