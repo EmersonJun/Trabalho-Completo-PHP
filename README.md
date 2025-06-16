@@ -89,4 +89,4 @@ Bem-vindo à **Loja Online**, um sistema completo de e-commerce desenvolvido em 
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seuusuario/loja-php-mvc.git
+   git clone https://github.com/EmersonJun/Trabalho-Completo-PHP.git
