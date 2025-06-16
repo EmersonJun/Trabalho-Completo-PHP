@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Loja Online</title>
-    <?php include 'templates/header.php'; ?> <!-- Certifique-se de que este inclui o Bootstrap -->
+    <?php include 'templates/header.php'; ?> 
 </head>
 <body>
     <div class="container mt-5">

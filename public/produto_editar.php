@@ -13,7 +13,6 @@ if (!$id) {
     exit;
 }
 
-// Buscar o produto atual
 $stmt = DB::getConnection()->prepare("SELECT * FROM produtos WHERE id = ?");
 $stmt->execute([$id]);
 $produto_atual = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -23,7 +22,6 @@ if (!$produto_atual) {
     exit;
 }
 
-// Buscar categorias
 $categorias = DB::getConnection()->query("SELECT * FROM categorias")->fetchAll(PDO::FETCH_ASSOC);
 $erro = "";
 $sucesso = "";
